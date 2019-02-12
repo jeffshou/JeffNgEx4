@@ -9,12 +9,12 @@ import { TestingService } from 'src/app/services/testing.service';
 })
 export class SearchBoxComponent implements OnInit {
 
-  constructor(private testingService:TestingService) { }
+  constructor(private testingService: TestingService) { }
 
   ngOnInit() {
   }
 
-  searchMe(event: any){
+  searchMe(event: any) {
     this.testingService.updateTestingName(event.target.value);
   }
 }

@@ -10,25 +10,25 @@ import { TestingService } from 'src/app/services/testing.service';
   templateUrl: './search-result.component.html',
   styleUrls: ['./search-result.component.css']
 })
-export class SearchResultComponent implements OnDestroy{
-  
+export class SearchResultComponent implements OnDestroy {
+
 
   private subscription: any;
   private name = '';
 
-  constructor( private testingService: TestingService) { 
+  constructor( private testingService: TestingService) {
 
     this.subscription = testingService.getTestingName().subscribe(state => {
 
       this.name = state.toLowerCase();
     });
    // this.currentSearchCriteria = this.store.select('TestingState');
-    
+
   }
 
 
-  ngOnInit() {
-  }
+  // ngOnInit() {
+  // }
 
   public ngOnDestroy() {
     this.subscription.unsubscribe();
