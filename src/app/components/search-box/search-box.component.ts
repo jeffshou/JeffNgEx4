@@ -4,8 +4,7 @@ import { TestingService } from 'src/app/services/testing.service';
 
 @Component({
   selector: 'app-search-box',
-  templateUrl: './search-box.component.html',
-  styleUrls: ['./search-box.component.css']
+  templateUrl: './search-box.component.html'
 })
 export class SearchBoxComponent implements OnInit {
 

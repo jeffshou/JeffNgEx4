@@ -7,8 +7,7 @@ import { TestingService } from 'src/app/services/testing.service';
 
 @Component({
   selector: 'app-search-result',
-  templateUrl: './search-result.component.html',
-  styleUrls: ['./search-result.component.css']
+  templateUrl: './search-result.component.html'
 })
 export class SearchResultComponent implements OnDestroy {
 
