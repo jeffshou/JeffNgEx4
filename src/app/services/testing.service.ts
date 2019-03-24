@@ -16,6 +16,16 @@ import { TestingUpdated } from '../store/testing.actions';
 const selectTesting = createFeatureSelector<TestingState>('testing');
 const selectTestingName = createSelector(selectTesting, (state: TestingState) => state.name);
 
+// 1 createSelector()
+// createSelector<State, S1, Result>
+// (s1: Selector<State, S1>, 
+// projector: (s1: S1) => Result)
+// : MemoizedSelector<State, Result>;
+
+// 2  createFeatureSelector
+// createFeatureSelector<T>
+// (featureName: string
+//   : MemoizedSelector<object, T>;
 
 @Injectable()
 export class TestingService {
